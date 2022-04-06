@@ -75,8 +75,8 @@ type AssetsDataProps struct {
 	Collection         Collection    `json:"collection"`
 	Schema             Schema        `json:"schema"`
 	Template           Template      `json:"template"`
-	MutableData        MutableData   `json:"mutable_data"`
-	ImmutableData      MutableData   `json:"immutable_data"`
+	MutableData        Data          `json:"mutable_data"`
+	ImmutableData      Data          `json:"immutable_data"`
 	TemplateMint       string        `json:"template_mint"`
 	BackedTokens       []interface{} `json:"backed_tokens"`
 	BurnedByAccount    interface{}   `json:"burned_by_account"`
@@ -103,15 +103,6 @@ type Collection struct {
 	MarketFee          float64       `json:"market_fee"`
 	CreatedAtBlock     string        `json:"created_at_block"`
 	CreatedAtTime      string        `json:"created_at_time"`
-}
-
-type Data struct {
-	Img         string `json:"img"`
-	Name        string `json:"name"`
-	Description string `json:"description"`
-}
-
-type MutableData struct {
 }
 
 type Schema struct {
